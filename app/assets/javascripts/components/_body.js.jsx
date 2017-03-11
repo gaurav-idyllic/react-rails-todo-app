@@ -52,8 +52,11 @@ var Body = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="">
         <NewTodo handleSubmit={this.handleSubmit} />
+        <div className="panel-heading ml-25">
+          <h2>Recent Todo List</h2>
+        </div>
         <AllTodos todos={this.state.todos} handleDelete={this.handleDelete} onUpdate={this.handleUpdate} />
       </div>
     )

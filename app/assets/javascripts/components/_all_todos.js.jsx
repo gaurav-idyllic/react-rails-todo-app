@@ -11,12 +11,12 @@ var AllTodos = React.createClass({
   render() {
     var todos = this.props.todos.map((todo) => {
       return (
-        <div key={todo.id}>
+        <ul className="" key={todo.id}>
           <Todo todo={todo}
                 handleDelete = {this.handleDelete.bind(this, todo.id)}
                 handleUpdate = {this.onUpdate}
           />
-        </div>
+        </ul>
       )
     });
     return (

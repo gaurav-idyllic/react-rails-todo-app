@@ -15,13 +15,22 @@ var Todo = React.createClass({
   },
 
   render() {
-    var title = this.state.editable ? <input type='text' ref='title' defaultValue={this.props.todo.title} /> : <h3>{ this.props.todo.title }</h3>;
+    var title = this.state.editable ? <input type='text' className="form-control" ref='title' defaultValue={this.props.todo.title} /> : <div>{ this.props.todo.title }</div>;
     return (
-      <div>
-        {title}
-        <button onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit' } </button>
-        <button onClick={this.props.handleDelete}>Delete</button>
-      </div>
+      <li className="list-group-item">
+        <div className="row">
+          <div className="col-lg-6">
+            {title}
+          </div>
+          <div className="col-lg-3">
+            <button className="btn btn-primary" onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit' } </button>
+          </div>
+
+          <div className="col-lg-3">
+            <button className="btn btn-primary" onClick={this.props.handleDelete}>Delete</button>
+          </div>
+        </div>
+      </li>
     )
   }
 });

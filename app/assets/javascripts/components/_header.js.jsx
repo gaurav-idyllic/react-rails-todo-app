@@ -1,8 +1,8 @@
 var Header = React.createClass({
   render() {
     return (
-    <div>
-      <h1>Welcome, Your todo list is here  </h1>
+    <div className="panel-heading ml-25">
+      <h1>Todo App using ReactJS </h1>
     </div>
     )
   }

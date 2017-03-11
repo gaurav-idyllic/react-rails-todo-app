@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Todo.all.select(:id, :title)
+    respond_with Todo.all.select(:id, :title, :updated_at)
   end
 
   def create
