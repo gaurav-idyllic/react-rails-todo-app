@@ -14,3 +14,7 @@ development:
 test:
   <<: *default
   database: react-rails-todo-test
+
+production:
+  <<: *default
+  database: react-rails-todo-production
