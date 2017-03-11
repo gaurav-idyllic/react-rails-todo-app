@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  username: postgres
+  password: root
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: react-rails-todo-development
+
+
+test:
+  <<: *default
+  database: react-rails-todo-test
